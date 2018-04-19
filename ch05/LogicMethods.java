@@ -5,7 +5,7 @@ public class LogicMethods
         printIsLarge(200);
         printIsLargeOrSmall(2);
         printLargest(4, 4);
-        printLargestOdd(2, 6);
+        printLargestOdd(7, 5);
     }
 
     private static void printIsLarge(int number)
@@ -43,24 +43,33 @@ public class LogicMethods
 
     private static void printLargestOdd(int number1, int number2)
     {
-        if ((number1 % 2 != 0) && (number2 % 2 != 0))
+        boolean x = number1 % 2 !=0;
+        boolean y = number2 % 2 !=0;
+        if (x && y)
         {
             if (number1 > number2)
             {
                 System.out.println("The largest odd number is: " + number1);
             }
         }
-        if ((number1 % 2 != 0) && (number2 % 2 != 0))
+        if (x && y)
         {
             if (number2 > number1)
             {
                 System.out.println("The largest odd number is: " + number2);
             }
         }
-        if ((number1 % 2 != 0) && (number2 % 2 != 0))
+
+        boolean a = number1 % 2 == 0;
+        boolean b = number2 % 2 == 0;
+        if ( a && b)
         {
-           //if ((number1 && number2))
             System.out.println("Neither number is odd.");
+        }
+
+        if (x&&y)
+        {
+            System.out.println("Two odds make an even. " + (number1 + number2));
         }
     }
 }
