@@ -29,7 +29,7 @@ public class StringUtil
 
         System.out.println(printPhoneNumber("501-555-0100"));
 
-        String firstE = findFirstE("Hello");
+        int firstE = findFirstE("Hello");
         System.out.println("findFirstE returns: " + firstE);
         System.out.println("findFirstE returns: " + findFirstE("Goodbye"));
 
@@ -40,15 +40,14 @@ public class StringUtil
 
     private static String isFinn( String name)
     {
-        int title = name.indexOf("Finn");
-        if (name == "Finn") return "true";
+        if (name.equals("Finn") ) return "true";
         else return "false";
     }
 
-    private static String findFirstE( String firstE)
+    private static int findFirstE( String firstE)
     {
-        System.out.println(firstE.indexOf('e'));
-        return firstE;
+        int e = firstE.indexOf('e');
+        return e;
     }
 
     private static String printPhoneNumber(String number)
